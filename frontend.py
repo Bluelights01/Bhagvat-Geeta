@@ -86,8 +86,7 @@ with center_col:
             {divine}
         </div>
     """, unsafe_allow_html=True)
-
-     mssg=st.text_input(label="Your prompt",key="text_input",value=st.session_state.text_input)
+    mssg=st.text_input(label="Your prompt",key="text_input",value=st.session_state.text_input)
 with left_col:
     st.markdown(f"""
         <div style="
