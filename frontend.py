@@ -32,6 +32,8 @@ else:
     speak=speak.split('\n')
     shloka=shloka.split('\n')
     shloka="<br>".join(shloka)
+    divine=divine.split('\n')
+    divine="<br>".join(divine)
     speak="<br>".join(speak)
     print(prompt)
     
