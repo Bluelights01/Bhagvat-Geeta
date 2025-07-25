@@ -2,6 +2,9 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 from google import genai
 import os
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 client = chromadb.PersistentClient(path="app1")
 gemini_client=genai.Client(os.getenv("GEMINI_API_KEY"))
