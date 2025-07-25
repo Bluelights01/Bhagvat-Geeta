@@ -6,7 +6,7 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 # --- Regular imports after patch ---
 import chromadb
 from sentence_transformers import SentenceTransformer
-import google.generativeai as genai
+from google import genai
 import os
 
 # --- ChromaDB persistent client ---
