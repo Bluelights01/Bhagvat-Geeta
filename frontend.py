@@ -81,6 +81,8 @@ with center_col:
             padding: 20px;
             background-color: #fffaf0;
             border-radius: 10px;
+
+            color:solid black;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         ">
             {divine}
