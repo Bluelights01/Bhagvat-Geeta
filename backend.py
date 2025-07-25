@@ -14,10 +14,7 @@ client = chromadb.PersistentClient(path="app1")
 
 # --- Gemini client setup ---
 # Set your Gemini API key properly
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-
-# Now use genai client without passing the key to Client()
-gemini_client = genai
+genai_client=genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 def promptans(prompt):
     res = gemini_client.models.generate_content(
