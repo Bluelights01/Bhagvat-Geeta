@@ -73,9 +73,20 @@ st.markdown("""
 left_col, center_col,=st.columns([1.5,4])
 
 with center_col:
-     mycontainer=st.container(height=480)
-     with mycontainer:
-         st.write(divine)
+    with st.container():
+         st.markdown(f"""
+        <div style="
+            height: 480px;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #fffaf0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        ">
+            {divine}
+        </div>
+    """, unsafe_allow_html=True)
+
      mssg=st.text_input(label="Your prompt",key="text_input",value=st.session_state.text_input)
 with left_col:
     st.markdown(f"""
