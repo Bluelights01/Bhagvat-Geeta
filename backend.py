@@ -6,14 +6,18 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 # --- Regular imports after patch ---
 import chromadb
 from sentence_transformers import SentenceTransformer
-from google import genai
+import google.generativeai as genai
 import os
 
 # --- ChromaDB persistent client ---
 client = chromadb.PersistentClient(path="app1")
 
 # --- Gemini client setup ---
-gemini_client = genai.Client(os.getenv("GEMINI_API_KEY"))
+# Set your Gemini API key properly
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+# Now use genai client without passing the key to Client()
+gemini_client = genai
 
 def promptans(prompt):
     res = gemini_client.models.generate_content(
