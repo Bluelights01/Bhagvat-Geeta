@@ -76,7 +76,7 @@ with center_col:
     with st.container():
          st.markdown(f"""
         <div style="
-            height: 480px;
+            height: 90vh;
             overflow-y: auto;
             padding: 20px;
             background-color: #fffaf0;
